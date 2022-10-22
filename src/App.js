@@ -113,9 +113,9 @@ export default function App() {
                             sx={(theme) => ({
                               fontSize:
                                 emp?.popularity === 5
-                                  ? "28px !important"
+                                  ? "30px !important"
                                   : emp?.popularity === 4
-                                  ? "20px"
+                                  ? "26px"
                                   : emp?.popularity === 3
                                   ? "18px"
                                   : emp?.popularity === 2

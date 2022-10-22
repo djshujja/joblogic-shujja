@@ -1,7 +1,10 @@
 import { Box, Slider, Typography, styled } from "@mui/material";
 
+import Camelia from "../../assets/Images/Profile pics/Carmelia Corleone.jpg";
+import Carlo from "../../assets/Images/Profile pics/Carlo Rizzi.jpg";
+import Luci from "../../assets/Images/Profile pics/Luci Mancini.jpg";
 import React from "react";
-import img from "../../assets/Images/Profile pics/Vito Corleone.jpg";
+import Vito from "../../assets/Images/Profile pics/Vito Corleone.jpg";
 
 export default function InfoCard({ selected }) {
   const PopularitySlider = styled(Slider)({
@@ -43,6 +46,19 @@ export default function InfoCard({ selected }) {
       },
     },
   });
+
+  const renderImage = () => {
+    return (
+      <img
+        alt={selected?.name}
+        src={require(`../../assets/Images/Profile pics/${selected?.image}`)}
+        width={"60%"}
+        height={"60%"}
+        style={{ border: "1px solid #ccc", borderRadius: 1 }}
+      />
+    );
+  };
+
   return (
     <Box
       sx={(theme) => ({
@@ -60,11 +76,11 @@ export default function InfoCard({ selected }) {
           width: "25%",
           display: "flex",
           height: "100%",
-          mt: 10,
+          mt: 6.5,
           justifyContent: "flex-end",
         })}
       >
-        <img alt={selected?.name} src={img} width={"180px"} height={"180px"} />
+        {renderImage()}
       </Box>
       <Box
         sx={(theme) => ({
