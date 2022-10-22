@@ -9,6 +9,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Data from "./constants/EmployeeData.json";
 import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
+import InfoCard from "./components/UI/InfoCard";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
@@ -78,7 +79,6 @@ export default function App() {
           >
             <Box
               sx={(theme) => ({
-                mt: 10,
                 width: "100%",
               })}
             >
@@ -140,8 +140,11 @@ export default function App() {
         <Box
           sx={(theme) => ({
             width: "80%",
+            minHeight: "100vh",
           })}
-        ></Box>
+        >
+          <InfoCard selected={employees[selected]} />
+        </Box>
       </Box>
     </Box>
   );
